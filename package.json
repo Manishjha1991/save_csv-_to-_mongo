@@ -1,0 +1,21 @@
+{
+  "name": "save_csv_to_mongo",
+  "version": "1.0.0",
+  "description": "read csv file and store into mongoDB",
+  "main": "app.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Manishjha1991/save_csv-_to-_mongo.git"
+  },
+  "author": "Manish Kumar Jha <mkjha9555@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Manishjha1991/save_csv-_to-_mongo/issues"
+  },
+  "homepage": "https://github.com/Manishjha1991/save_csv-_to-_mongo#readme"
+}
