@@ -1,9 +1,16 @@
 {
   "name": "save_csv_to_mongo",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "read csv file and store into mongoDB",
   "main": "app.js",
-  "dependencies": {},
+  "dependencies": {
+    "body-parser": "1.17.1",
+    "cookie-parser": "1.4.3",
+    "csvtojson": "1.1.4",
+    "express": "4.15.2",
+    "mongoose": "4.9.6",
+    "serve-favicon": "2.4.2"
+  },
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

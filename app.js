@@ -1,7 +1,5 @@
 var express = require('express'),
     path = require('path'),
-    favicon = require('serve-favicon'),
-    logger = require('morgan'),
     mongoose = require('mongoose'),
     cookieParser = require('cookie-parser'),
     bodyParser = require('body-parser');
@@ -10,16 +8,18 @@ var db = require('./model/db'),
 blob = require('./model/pincode.js');
 var app = express();
 
-// view engine setup
 
-// uncomment after placing your favicon in /public
-//app.use(favicon(__dirname + '/public/favicon.ico'));
-app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+
+try {
+    mongoose.connect('mongodb://localhost/userApi2'); //- starting a db connection
+}catch(err) {
+    mongoose.createConnection('mongodb://localhost/userApi2'); //- starting another db connection
+}
 
 app.use(function(req, res, next) {
     var err = new Error('Not Found');
